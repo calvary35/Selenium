@@ -1,0 +1,64 @@
+Review Class 02
+
+Radio Buttons:
+
+    How to deal with radio buttons:
+
+    1.Find the element
+    2.Click on it
+
+    If you want to del with multiple radio buttons:
+
+    1.Find all the elements
+    2.Loop through it
+    3.Check for your desired one
+    4.Click on it
+
+    Multi Select Drop Down vs. Single Select
+
+    Is there any difference in how we deal with multi select drop and a single select drop down
+
+    Are there other options available to be used with multi select drop down?
+
+    In multi select we have the option
+    to deselectALL();
+        deselectByVisibleText();
+        deselectByIndex();
+
+
+    1.text Box --> sendKeys(),clear() *driver.findElement() *SendKeys(),clear()
+    2.Buttons --> click(), if it has text (get text() can be also used)--> *driver.Findelement() ,*click(), getText()
+    3.Radio Buttons--> click() --> *driver.FindElement *click()
+        in case of multiple radio buttons the approach is
+        1.findElements()-->the Xpath you write for finding these elements should be able to select all the desired elements
+        2.You traverse through the list
+        3.You can use getText(), getAttribute() to extract information about that particular radio button
+        4.if it is the desired one we click
+
+        the whole above approach is used for checkBoxes
+
+        .isDisplayed()--> the element is displayed(visible) on the page
+        .isEnabled()--> the element can be selected or not
+        .isSelected()--> the element is selected or not
+
+    4.DropDowns:
+        2 types --> single select, multiselect
+
+        The approach for dealing with both is exactly same
+        Approach:
+        1.find the element --> the select tag
+        2.Select sel = new Select (WebElement that we found for select tag in step 1)
+
+        Using 3 method you can select the options from the drop downs
+        ByIndex(),ByValue(),ByVisibleText().
+
+    The other options available to us in Multiple Select are:
+    deselectALL();
+    deselectByVisibleText();
+    deselectByIndex();
+
+    --In order to check if the dropDown is multi select or not --> .isMultiple();
+
+    --In order to have all the options available to us on the DropDown using select class --> .getOptions
+
+    Note: We can only use select class if---> The drop down is made using select tage;
