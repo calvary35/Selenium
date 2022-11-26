@@ -30,7 +30,10 @@ public class HomeWork {
         clickBox.click();
         // 2.Select BabyCat from drop down
         driver.switchTo().defaultContent();
+
         driver.switchTo().frame("frame2");
+
+
         WebElement babyCat = driver.findElement(By.xpath("//select[@id='animals']"));
         Select select=new Select(babyCat);
         List<WebElement> options = select.getOptions();

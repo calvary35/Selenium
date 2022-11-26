@@ -29,8 +29,10 @@ public class WaitsHW1 {
         privacy.click();
 
         //title of page we are looking for: Google Account Help
+        String mainPageWindow= driver.getWindowHandle();
+
         Set<String> allHandles = driver.getWindowHandles();
-    String homeWindow= driver.getWindowHandle();
+
 
         for (String handle : allHandles) {
             //switching the focus to the current handle from list
@@ -45,7 +47,7 @@ public class WaitsHW1 {
         WebElement communityBtn = driver.findElement(By.xpath("//a[text()='Community']"));
         communityBtn.click();
 
-        driver.switchTo().window(homeWindow);
+        driver.switchTo().window(mainPageWindow);
         WebElement userName = driver.findElement(By.xpath("//input[@type='email']"));
 
         userName.sendKeys("kbrown123");

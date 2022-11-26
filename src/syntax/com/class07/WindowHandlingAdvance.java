@@ -19,6 +19,7 @@ public class WindowHandlingAdvance {
         //task: go to gmail signup page and get the window handle
         // go to gmail signup page
         driver.get("http://accounts.google.com/signup");
+
         //        click on help button
         WebElement helpBtn = driver.findElement(By.xpath("//a[text()='Help']"));
         helpBtn.click();

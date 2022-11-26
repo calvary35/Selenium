@@ -31,6 +31,7 @@ public class multipleSelectDropDown {
         //By value
         select.selectByValue("Pennsylvania");
 
+
         Thread.sleep(3000);
         //deselect by index
         select.deselectByIndex(3);
